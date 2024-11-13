@@ -18,3 +18,9 @@ export const store = configureStore({
     counter: counterReducer,
   },
 })
+
+type AppStore = typeof store
+type AppDispatch = typeof store.dispatch
+type RootState = ReturnType<typeof store.getState>
+
+export type { AppStore, AppDispatch, RootState }
